@@ -4,7 +4,7 @@
 ##         EffortindexRousseaAugNominal.csv (bootstrap/data)
 ## After:  catch_by_stock.png, catch_relative.png, catch_total.png,
 ##         driors_2.png, input.rds (data)
-## Test
+## Test again for R
 
 library(TAF)
 library(dplyr)   # filter, group_by, left_join, mutate, summarise, ungroup
