@@ -80,6 +80,9 @@ stocks <- catch_effort %>%
   nest() %>%
   ungroup()
 
+## Read Priors data
+priors<-read.csv("bootstrap/data/priors.csv")
+
 ## Add nested 'driors' column (data and priors)
 stocks <- stocks %>%
   mutate(
@@ -91,8 +94,8 @@ stocks <- stocks %>%
           taxa = .x,shape_prior=2,  # use_heuristics=TRUE, shape_prior=2,
           catch = .y$capture,
           years = .y$year,
-          initial_state = 0.75, initial_state_cv = 0.1, b_ref_type = "k",
-          terminal_state = 0.4, terminal_state_cv = 0.25,# Prior basis from MArcelos squid cuttlefish analysis in Med
+          initial_state = priors$initial_state, initial_state_cv=priors$initial_state_cv, b_ref_type = "k",
+          terminal_state = priors$terminal_state, terminal_state_cv = priors$terminal_state_cv,# Prior basis from MArcelos squid cuttlefish analysis in Med
           effort = .y$E1[!is.na(.y$E1)], effort_years=.y$year[!is.na(.y$E1)],
           growth_rate_prior = NA,
           growth_rate_prior_cv = 0.2)
