@@ -1,7 +1,4 @@
-bootstrap/data/*
-data/*
-model/*
-output/*
-report/*
 .Rproj.user
-*.Rproj
+.Rhistory
+.RData
+.Ruserdata
