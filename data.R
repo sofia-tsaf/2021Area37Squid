@@ -19,7 +19,7 @@ library(tidyr)   # nest, pivot_longer
 mkdir("data")
 
 ## Read catch data, convert to tibble (long format)
-catch <- read.csv("bootstrap/data/ShrimpArea37.csv")
+catch <- read.csv("bootstrap/data/squidscuttlefishArea37.csv")
 catch <- catch %>%
   pivot_longer(-c(Year, Total), names_to="stock", values_to="capture") %>%
   filter(!is.na(Year)) %>%

@@ -34,7 +34,7 @@ current_status$status <- ordered(current_status$status,
 barplot(prop.table(table(current_status$status)), col=c("green","yellow","red"))
 dev.off()
 taf.png("status_sofia")
-results_sofia <- read.taf("bootstrap/data/sofia20_proportions_area37shrimp.csv")
+results_sofia <- read.taf("bootstrap/data/sofia20_proportions_area37squids.csv")
 results_sofia$Category <- ordered(results_sofia$Category,
                                   c("Underfished","Fully fished","Overfished"))
 barplot(Proportion~Category, results_sofia, col=c("green","yellow","red"))
