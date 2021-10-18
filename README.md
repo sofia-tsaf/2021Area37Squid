@@ -1,6 +1,6 @@
 # area37
 
-Experiment with Rishi, demonstrating how the SOFIA analysis for Area 37 Squidds Octopus and Cuttlefish
+Experiment with Rishi, demonstrating how the SOFIA analysis for Area 37 Squids Octopus and Cuttlefish
 (Mediterranean and Black Sea) can run in TAF.
 
 ## How to run
