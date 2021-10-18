@@ -15,7 +15,7 @@ stocks <- readRDS("data/input.rds")
 ## Run model
 setwd("model")  # compile inside 'model' folder
 sfs <- safely(fit_sraplus)
-samps <- 11
+samps <- 8
 a <- Sys.time()
 stocks <- stocks %>%
   ungroup() %>%
